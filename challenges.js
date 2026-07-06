@@ -21,7 +21,7 @@ export const CHALLENGES = Object.freeze([
     label: "Educación",
     title: "Reto: Educación",
     cardDescription: "Soluciones para aprendizaje, gestión académica y acceso a recursos educativos.",
-    brief: "Construyan una solución tecnológica en Python que atienda una problemática real del aprendizaje, la gestión académica o el acceso a recursos educativos.",
+    brief: "Los administradores de laboratorios universitarios o talleres técnicos gestionan el préstamo de herramientas y equipos costosos mediante bitácoras de papel o formularios estáticos, lo que genera pérdidas de inventario, retrasos en las prácticas y falta de responsables en caso de daños.",
     mission: "Identifiquen un usuario objetivo, definan una propuesta de valor clara y desarrollen un prototipo funcional que pueda demostrarse ante el jurado.",
     focus: ["Aprendizaje", "Gestión académica", "Acceso a recursos", "Experiencia estudiantil"],
     success: "La solución debe mostrar valor real para estudiantes, docentes o comunidades educativas, con una demo clara y funcional."
@@ -32,7 +32,7 @@ export const CHALLENGES = Object.freeze([
     label: "Salud",
     title: "Reto: Salud",
     cardDescription: "Herramientas para bienestar, prevención, acompañamiento o gestión de información en salud.",
-    brief: "Construyan una solución tecnológica en Python que apoye procesos de bienestar, prevención, seguimiento o gestión de información relacionada con salud.",
+    brief: "Los pacientes con enfermedades crónicas y/o personas de la tercera edad, suelen olvidar si ya se tomaron la dosis exacta de sus medicamentos diarios, lo que genera duplicidad de dosis o tratamientos incompletos.",
     mission: "Definan un problema concreto, expliquen a quién beneficia y desarrollen un prototipo que demuestre cómo la tecnología puede mejorar la toma de decisiones o la experiencia del usuario.",
     focus: ["Bienestar", "Prevención", "Seguimiento", "Gestión de información"],
     success: "La solución debe comunicar impacto potencial, facilidad de uso y una propuesta de valor responsable."
@@ -43,7 +43,7 @@ export const CHALLENGES = Object.freeze([
     label: "Sostenibilidad",
     title: "Reto: Sostenibilidad",
     cardDescription: "Ideas para uso eficiente de recursos, conciencia ambiental e impacto social positivo.",
-    brief: "Construyan una solución tecnológica en Python orientada a sostenibilidad, uso eficiente de recursos, conciencia ambiental o impacto social positivo.",
+    brief: " El consumo fantasma de energía (dispositivos conectados que no se usan) y la falta de visibilidad en tiempo real hacen que los hogares y pequeñas oficinas desperdicien electricidad y paguen facturas altas sin saber por qué.",
     mission: "Conviertan una problemática ambiental o social en una propuesta funcional que pueda medirse, explicarse y presentarse como una oportunidad de emprendimiento.",
     focus: ["Recursos", "Datos ambientales", "Consumo responsable", "Impacto social"],
     success: "La solución debe demostrar un beneficio claro, medible o comunicable para usuarios, comunidades o instituciones."
@@ -54,7 +54,7 @@ export const CHALLENGES = Object.freeze([
     label: "Automatización",
     title: "Reto: Automatización",
     cardDescription: "Prototipos para reducir tareas repetitivas, mejorar procesos y acelerar decisiones.",
-    brief: "Construyan una solución tecnológica en Python que automatice una tarea repetitiva, mejore un flujo de trabajo o reduzca errores en un proceso cotidiano.",
+    brief: "Las pequeñas empresas de logística y distribución pierden horas diarias planificando rutas de entrega de forma empírica en mapas tradicionales, lo que incrementa el gasto de combustible, acelera el desgaste de los vehículos y genera retrasos e insatisfacción en los clientes finales.",
     mission: "Detecten un proceso que consuma tiempo, diseñen una mejora concreta y desarrollen un prototipo que evidencie ahorro, eficiencia o mejor experiencia de uso.",
     focus: ["Productividad", "Flujos de trabajo", "Reducción de errores", "Procesos internos"],
     success: "La solución debe mostrar antes/después del proceso y explicar por qué la automatización genera valor real."
