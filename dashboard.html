@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard del equipo para el Hackathon de Python." />
+  <title>Dashboard | Hackathon de Python</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="dashboard">
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Hackathon de Python">
+        <span class="brand-mark logo-slot" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Hackathon de Python</strong>
+          <small>From Code to Startup</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" data-nav>
+        <a href="index.html#tematicas">Tem&aacute;ticas</a>
+        <a href="resources.html">Recursos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar modo visual">Modo</button>
+      </nav>
+    </header>
+
+    <main class="section-padding page-main">
+      <div class="container">
+        <div class="dashboard-header">
+          <div>
+            <p class="eyebrow">Panel del equipo</p>
+            <h1>Dashboard</h1>
+            <p>Monitorea tu misi&oacute;n, estado y tiempo restante para las presentaciones.</p>
+          </div>
+          <a class="button button-ghost" id="dashboardChallengeLink" href="challenge.html">Volver al reto</a>
+        </div>
+
+        <section class="dashboard-grid" id="dashboardGrid" aria-live="polite">
+          <article class="metric-card glass-card">
+            <span>Equipo</span>
+            <strong id="dashTeam">Sin reclamar</strong>
+          </article>
+          <article class="metric-card glass-card">
+            <span>Tema</span>
+            <strong id="dashTheme">Pendiente</strong>
+          </article>
+          <article class="metric-card glass-card">
+            <span>Estado</span>
+            <strong id="dashStatus">No confirmado</strong>
+          </article>
+          <article class="metric-card glass-card">
+            <span>Hora de presentaciones</span>
+            <strong id="dashPresentation">Pendiente</strong>
+          </article>
+        </section>
+
+        <section class="dashboard-countdown glass-card" aria-labelledby="dash-countdown-title">
+          <div>
+            <p class="eyebrow">Tiempo restante</p>
+            <h2 id="dash-countdown-title">Cuenta regresiva</h2>
+          </div>
+          <div class="countdown-grid compact" data-countdown="presentation">
+            <div><strong data-days>00</strong><span>Dias</span></div>
+            <div><strong data-hours>00</strong><span>Horas</span></div>
+            <div><strong data-minutes>00</strong><span>Min</span></div>
+            <div><strong data-seconds>00</strong><span>Seg</span></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Hackathon de Python</strong>
+          <p>From Code to Startup</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="resources.html">Recursos</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

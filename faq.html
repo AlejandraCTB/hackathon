@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preguntas frecuentes del Hackathon de Python." />
+  <title>FAQ | Hackathon de Python</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="faq">
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Hackathon de Python">
+        <span class="brand-mark logo-slot" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Hackathon de Python</strong>
+          <small>From Code to Startup</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" data-nav>
+        <a href="index.html#tematicas">Tem&aacute;ticas</a>
+        <a href="resources.html">Recursos</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+        <a href="dashboard.html">Dashboard</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar modo visual">Modo</button>
+      </nav>
+    </header>
+
+    <main class="section-padding page-main">
+      <div class="container narrow">
+        <div class="section-heading centered">
+          <p class="eyebrow">Ayuda rapida</p>
+          <h1>Preguntas frecuentes</h1>
+          <p>Respuestas claras para que cada equipo pueda concentrarse en idear, construir y presentar.</p>
+        </div>
+
+        <section class="accordion-list" data-accordion>
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              &iquest;Cu&aacute;ntas personas debe tener un equipo?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>El flujo esta pensado para equipos de tres participantes. El nombre del equipo y los datos del lider se registran al aceptar la mision.</p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              &iquest;Puedo cambiar de reto luego de revelarlo?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>No. Una vez revelada una tematica, la experiencia bloquea la seleccion local para evitar cambios de reto.</p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              &iquest;Que pasa cuando un equipo reclama una tematica?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>Firestore guarda el reclamo y todas las personas conectadas ven inmediatamente el estado bloqueado con el nombre del equipo.</p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              &iquest;Donde se cargan los retos reales?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>En el archivo <code>challenges.js</code>. La plantilla no inventa el contenido de los retos; solo deja la estructura lista para completar.</p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false">
+              &iquest;El proyecto funciona en GitHub Pages?
+              <span>+</span>
+            </button>
+            <div class="accordion-panel">
+              <p>Si. Es HTML, CSS y JavaScript modular. No requiere backend propio, bundler, React, Angular, Vue, Bootstrap, Tailwind ni jQuery.</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Hackathon de Python</strong>
+          <p>From Code to Startup</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="resources.html">Recursos</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

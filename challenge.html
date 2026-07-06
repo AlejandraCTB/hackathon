@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reto revelado del Hackathon de Python: From Code to Startup." />
+  <title>Reto | Hackathon de Python</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="challenge">
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Hackathon de Python">
+        <span class="brand-mark logo-slot" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Hackathon de Python</strong>
+          <small>From Code to Startup</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" data-nav>
+        <a href="index.html#tematicas">Tem&aacute;ticas</a>
+        <a href="resources.html">Recursos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="dashboard.html">Dashboard</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar modo visual">Modo</button>
+      </nav>
+    </header>
+
+    <main class="section-padding page-main">
+      <div class="container narrow">
+        <a class="back-link" href="index.html#tematicas">&larr; Volver a tem&aacute;ticas</a>
+        <section class="challenge-hero glass-card" id="challengeHero" aria-live="polite">
+          <p class="eyebrow">Reto desbloqueado</p>
+          <h1 id="challengeTitle">Cargando reto...</h1>
+          <p id="challengeIntro">Estamos preparando la informaci&oacute;n de la misi&oacute;n.</p>
+          <div class="status-pill" id="challengeStatus">Verificando disponibilidad...</div>
+        </section>
+
+        <section class="challenge-details" id="challengeDetails"></section>
+
+        <section class="mission-panel glass-card" aria-labelledby="mission-title">
+          <div>
+            <p class="eyebrow">Siguiente paso</p>
+            <h2 id="mission-title">Aceptar mision</h2>
+            <p>Al confirmar el reclamo, esta tem&aacute;tica quedar&aacute; bloqueada para los dem&aacute;s equipos en tiempo real.</p>
+          </div>
+          <button class="button button-primary button-xl" id="acceptMissionButton" type="button">Aceptar misi&oacute;n</button>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Hackathon de Python</strong>
+          <p>From Code to Startup</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="faq.html">FAQ</a>
+          <a href="resources.html">Recursos</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="modal" id="missionModal" aria-labelledby="missionFormTitle">
+    <form class="modal-card form-card" id="missionForm" method="dialog">
+      <button class="modal-close" value="cancel" aria-label="Cerrar">&times;</button>
+      <p class="eyebrow">Reclamar reto</p>
+      <h2 id="missionFormTitle">Datos del equipo</h2>
+      <p class="modal-copy">Usaremos estos datos para bloquear la tem&aacute;tica y mostrar el estado del equipo en el dashboard.</p>
+
+      <label>
+        <span>Nombre del equipo</span>
+        <input type="text" name="teamName" autocomplete="organization" minlength="2" maxlength="80" required />
+      </label>
+
+      <label>
+        <span>Nombre del l&iacute;der</span>
+        <input type="text" name="leaderName" autocomplete="name" minlength="2" maxlength="80" required />
+      </label>
+
+      <label>
+        <span>Correo</span>
+        <input type="email" name="leaderEmail" autocomplete="email" required />
+      </label>
+
+      <div class="form-alert" id="formAlert" role="alert"></div>
+
+      <div class="modal-actions">
+        <button class="button button-ghost" value="cancel" type="button" data-close-mission>Cancelar</button>
+        <button class="button button-primary" type="submit">Confirmar reclamo</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
