@@ -11,10 +11,11 @@
 */
 
 export const firebaseConfig = {
-  apiKey: "REPLACE_WITH_API_KEY",
-  authDomain: "REPLACE_WITH_AUTH_DOMAIN",
-  projectId: "REPLACE_WITH_PROJECT_ID",
-  storageBucket: "REPLACE_WITH_STORAGE_BUCKET",
-  messagingSenderId: "REPLACE_WITH_MESSAGING_SENDER_ID",
-  appId: "REPLACE_WITH_APP_ID"
+  apiKey: "AIzaSyB4CX-UvCpa0095U8bOQO3C5aqGzwZB4kQ",
+  authDomain: "hackathon-c977f.firebaseapp.com",
+  projectId: "hackathon-c977f",
+  storageBucket: "hackathon-c977f.firebasestorage.app",
+  messagingSenderId: "1065448249628",
+  appId: "1:1065448249628:web:4dcb7da6542678998542d9",
+  measurementId: "G-Y5BHKWHLJ8"
 };
