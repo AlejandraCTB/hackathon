@@ -216,7 +216,7 @@ function renderThemeCards(root) {
       <article class="theme-card ${isClaimed ? "is-claimed" : ""}">
         <div class="theme-icon" aria-hidden="true">${challenge.icon}</div>
         <h3>${challenge.label}</h3>
-        <p>Revela la mision para conocer el reto asignado a esta tematica.</p>
+        <p>${escapeHTML(challenge.cardDescription || "Revela la mision para conocer el reto asignado a esta tematica.")}</p>
         <footer>
           <span class="status-pill ${isClaimed ? "is-claimed" : lockedByLocalChoice ? "is-local-locked" : ""}">${statusText}</span>
           <button class="button button-primary" type="button" data-view-challenge="${challenge.id}" ${buttonDisabled && localThemeId !== challenge.id ? "disabled" : ""}>${buttonText}</button>
@@ -288,15 +288,16 @@ function renderChallenge(challenge) {
   const details = document.getElementById("challengeDetails");
 
   title.textContent = challenge.title || `Reto de ${challenge.label}`;
-  intro.textContent = challenge.context || "El contenido especifico de este reto esta pendiente de cargar en challenges.js.";
+  intro.textContent = challenge.brief || "Revisa la mision asignada y prepara un prototipo funcional con Python.";
 
   const sections = [
-    { title: "Contexto", value: challenge.context },
-    { title: "Problema", value: challenge.problem },
-    { title: "Objetivo", value: challenge.objective },
-    { title: "Entregables", value: challenge.deliverables, list: true },
-    { title: "Restricciones", value: challenge.restrictions, list: true }
-  ];
+    { title: "Mision", value: challenge.mission },
+    { title: "Enfoque sugerido", value: challenge.focus, list: true },
+    { title: "Criterio de exito", value: challenge.success }
+  ].filter((section) => {
+    if (Array.isArray(section.value)) return section.value.length > 0;
+    return Boolean(section.value);
+  });
 
   details.innerHTML = sections.map((section) => {
     const content = renderChallengeSectionContent(section);
@@ -314,14 +315,14 @@ function renderChallenge(challenge) {
 function renderChallengeSectionContent(section) {
   if (section.list) {
     if (!Array.isArray(section.value) || section.value.length === 0) {
-      return `<p class="placeholder-copy">Pendiente de cargar en challenges.js.</p>`;
+      return "";
     }
 
     return `<ul>${section.value.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>`;
   }
 
   if (!section.value) {
-    return `<p class="placeholder-copy">Pendiente de cargar en challenges.js.</p>`;
+    return "";
   }
 
   return `<p>${escapeHTML(section.value)}</p>`;

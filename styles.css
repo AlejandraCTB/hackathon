@@ -158,16 +158,26 @@ code {
   min-width: 0;
 }
 
-.brand-mark,
-.logo-slot {
-  width: 52px;
-  height: 52px;
-  border-radius: 18px;
-  border: 1px dashed color-mix(in srgb, var(--ieee-blue) 50%, var(--border));
-  background:
-    linear-gradient(145deg, rgba(0, 98, 155, 0.12), rgba(123, 44, 191, 0.1)),
-    var(--surface-solid);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+.brand-logo {
+  width: clamp(108px, 14vw, 154px);
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 0.36rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--ieee-blue) 24%, var(--border));
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), var(--shadow-sm);
+}
+
+.brand-logo img,
+.event-logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -312,6 +322,20 @@ code {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+
+.hero-logo-card {
+  width: min(360px, 78vw);
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.35rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--ieee-blue) 24%, var(--border));
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-md);
 }
 
 .hero-content h1,
@@ -654,11 +678,6 @@ code {
 .detail-card ul {
   margin: 0.4rem 0 0;
   padding-left: 1.2rem;
-}
-
-.placeholder-copy {
-  color: var(--gray-500);
-  font-style: italic;
 }
 
 .mission-panel {

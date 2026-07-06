@@ -1,12 +1,12 @@
 # Hackathon de Python: From Code to Startup
 
-Aplicacion web estatica, profesional y lista para GitHub Pages para gestionar la seleccion y reclamo de retos de un hackathon universitario.
+Aplicación web estática, profesional y lista para GitHub Pages para gestionar la selección y reclamo de retos de un hackathon universitario.
 
 ## Stack
 
 - HTML5
 - CSS3
-- JavaScript ES6 con modulos
+- JavaScript ES6 con módulos
 - Firebase Firestore para almacenamiento y actualizaciones en tiempo real
 - Sin React, Angular, Vue, Bootstrap, Tailwind ni jQuery
 
@@ -31,38 +31,35 @@ hackathon/
 `-- components/
 ```
 
-## Donde poner los logos
+## Dónde poner los logos
 
-Los espacios de logos estan vacios por diseno. Puedes colocar tus imagenes dentro de:
+El logo principal ya está configurado como imagen transparente en:
 
 ```txt
-assets/images/
-assets/icons/
+assets/images/event-logo.png
 ```
 
-Luego reemplaza los elementos con clase `logo-slot` por etiquetas `<img>`.
+Puedes reemplazar ese archivo por otro logo con el mismo nombre para actualizarlo en todas las páginas.
 
-## Donde poner los retos reales
+## Retos y temáticas
 
-Abre `challenges.js` y completa cada objeto. No se invento contenido de retos; la plantilla deja campos vacios para que pegues la informacion final.
-
-Ejemplo de estructura dentro del archivo:
+Los retos se cargan desde `challenges.js`. La estructura fue simplificada para usar solo los campos que se muestran en la interfaz:
 
 ```js
 {
   id: "education",
-  icon: "\\uD83D\\uDCDA",
-  label: "Educacion",
-  title: "",
-  context: "",
-  problem: "",
-  objective: "",
-  deliverables: [],
-  restrictions: []
+  icon: "📚",
+  label: "Educación",
+  title: "Reto: Educación",
+  cardDescription: "Resumen para la tarjeta de selección.",
+  brief: "Descripción corta del reto.",
+  mission: "Misión que verá el equipo al revelar el reto.",
+  focus: ["Punto 1", "Punto 2"],
+  success: "Criterio de éxito para la presentación."
 }
 ```
 
-Puedes llenar `deliverables` y `restrictions` como arrays de strings.
+Los IDs `education`, `health`, `sustainability` y `automation` también se usan en Firestore, así que no deben cambiarse sin actualizar las reglas.
 
 ## Configurar Firebase Firestore
 
@@ -70,9 +67,9 @@ Puedes llenar `deliverables` y `restrictions` como arrays de strings.
 
 1. Entra a Firebase Console.
 2. Crea un proyecto nuevo.
-3. En el menu Build, abre Firestore Database.
+3. En el menú Build, abre Firestore Database.
 4. Crea una base de datos Firestore.
-5. Selecciona la region que prefieras.
+5. Selecciona la región que prefieras.
 
 ### 2. Crear app web
 
@@ -166,7 +163,7 @@ timezoneLabel: "Panama UTC-5"
 
 ## Probar localmente
 
-Por usar modulos ES6, abre el proyecto con un servidor local, no con doble clic.
+Por usar módulos ES6, abre el proyecto con un servidor local, no con doble clic.
 
 Opcion rapida con Python:
 
@@ -211,7 +208,7 @@ hackathon/styles.css
 1. Entra al repositorio.
 2. Abre Settings.
 3. En el menu lateral, abre Pages.
-4. En Build and deployment, selecciona Deploy from a branch.
+4. En Build and deployment, seleccióna Deploy from a branch.
 5. Selecciona la rama `main`.
 6. Selecciona la carpeta `/root`.
 7. Guarda.
@@ -228,7 +225,7 @@ https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/
 - [ ] Pegar credenciales reales en `config.example.js`.
 - [ ] Activar Firestore.
 - [ ] Publicar reglas de seguridad.
-- [ ] Pegar los retos reales en `challenges.js`.
+- [x] Retos cargados en `challenges.js`.
 - [ ] Cambiar hora de presentaciones si aplica.
 - [ ] Agregar logos en `assets/images/`.
 - [ ] Probar con dos navegadores al mismo tiempo para validar el bloqueo en tiempo real.
